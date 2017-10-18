@@ -1,0 +1,33 @@
+<?php echo $this->headTitle('Login Page'); ?><br/>
+<div style="padding: 50px;">	   
+	<?php
+		$form->prepare();
+		echo $this->form()->openTag($form);
+	?>
+	<h5>Enter Details to Login</h5>
+	<br />
+	<center>
+		<table cellspacing="5" border="1">
+			<tr>
+				<td><?php echo $this->formRow($form->get('user_login')); ?></td>
+			</tr>
+			<tr>
+				<td><?php echo $this->formRow($form->get('user_pass')); ?></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="rememberme" value="1" /> Remember me</td>
+			</tr>
+			<tr>
+				<td>
+					<?php
+						echo $this->formElement($form->get('login'));
+					?>
+				</td>
+			</tr>		
+		</table>
+	</center>
+	<?php
+		echo $this->form()->closeTag();
+	?>	
+</div>
+<br/>
